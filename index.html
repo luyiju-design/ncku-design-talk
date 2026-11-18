@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>設計思考與 AI 講座</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="assets/deck.css?v=113">
+<style>
+.pace{display:none!important}
+.tool-off{height:520px;border-radius:16px}
+.wk-off{height:100%;display:grid;place-items:center;background:linear-gradient(160deg,#eef2ff,#dbe4ff);color:var(--ink-3);font:700 20px/1 var(--sans)}
+.video-off{position:absolute;inset:24px;border-radius:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;text-align:center}
+.video-off span{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:44px;padding-left:8px;background:radial-gradient(circle at 35% 28%,#7aa7f5 0%,#2e6bd8 42%,#1f4fa8 72%,#163a80 100%);opacity:.55}
+.video-off b{font:900 64px/1.2 var(--sans);color:var(--ink)}
+.video-off p{font:600 32px/1.4 var(--sans);color:var(--ink-3)}
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+
+<main class="stage" id="stage">
+
+<!-- ============ 開場暖場 ============ -->
+<section class="slide cover" data-section="open" data-title="封面">
+  <div class="cover-copy">
+    <p class="kicker r">2026.11.18 · 國立成功大學 工業設計系</p>
+    <h1 class="r">設計思考</h1>
+    <p class="power r">讓 AI 成為你的<em>超能力</em></p>
+    <p class="by r">Luju<span>IBM Consulting · Experience Design</span></p>
+  </div>
+  <div class="cover-3d r" aria-hidden="true">
+    <canvas class="island" width="900" height="900"></canvas>
+    <p class="build-status pill">AI 搭建中 <b>0%</b></p>
+  </div>
+  <aside class="notes"><b class="cue">謝謝邱老師</b><b class="cue">Luju／IBM 設計顧問</b><b class="cue">主題：設計思考，讓 AI 成為你的超能力</b><span class="act">投影確認後按 →，講者計時開始</span><span class="go">先講一下今天的安排</span></aside>
+</section>
+
+<section data-at="14:01" class="slide rundown" data-section="open" data-title="今天的 Rundown">
+  <p class="kicker r">Rundown</p>
+  <h2 class="r">今天想和大家分享這些事</h2>
+  <ol class="rd-list r">
+    <li><b>01</b><h3>設計思考</h3><p>先把問題想清楚，分組動手練習</p></li>
+    <li><b>02</b><h3>專案實戰</h3><p>設計思考在業界實際長什麼樣子</p></li>
+    <li><b>03</b><h3>AI 提升個人效率</h3><p>AI 怎麼幫我把事情做得更快</p></li>
+    <li><b>04</b><h3>串起整個團隊</h3><p>從自己變快，到大家一起變快</p></li>
+    <li class="rd-pause">中場休息・10 分鐘</li>
+    <li><b>05</b><h3>AI 時代的設計師</h3><p>AI 什麼都能做，設計師還能做什麼</p></li>
+    <li><b>06</b><h3>SkillsBuild &amp; Bob</h3><p>免費學習平台與 AI 工具（Careena）</p></li>
+    <li class="rd-pause">Q&amp;A</li>
+  </ol>
+  <aside class="notes"><b class="cue">前半：設計思考＋暖身</b><b class="cue">業界專案</b><b class="cue">後半：AI 怎麼幫我</b><b class="cue">Careena</b><b class="cue">Q&amp;A</b><span class="act">30 秒帶過</span><span class="go">開始前請大家拿出手機</span></aside>
+</section>
+
+<section data-at="14:02" class="slide poll" data-section="open" data-title="加入互動" data-poll>
+  <div class="poll-copy">
+    <p class="kicker r">Warm-up · 暖場</p>
+    <h2 class="r">拿出手機，<br>掃描加入互動</h2>
+    <p class="lead r">先用它回答兩個問題</p>
+  </div>
+  <figure class="qr-card glass r"><div class="qr" data-qr></div><figcaption data-poll-host></figcaption></figure>
+  <aside class="notes"><b class="cue">掃碼約 1 分鐘</b><b class="cue">第 1 題：用哪個 AI</b><b class="cue">第 2 題：用 AI 做什麼（記下 2–3 個詞）</b><span class="act">V 開主持人畫面 → 第 1 題 → 第 2 題 → 點「關閉」</span><span class="go">有問題隨時丟 Slido</span></aside>
+</section>
+
+<section data-at="14:04" class="slide poll" data-section="open" data-title="Slido 提問">
+  <div class="poll-copy">
+    <p class="kicker r">Q&amp;A · 隨時提問</p>
+    <h2 class="r">有問題，<br>隨時丟到 Slido</h2>
+    <p class="lead r">不用等到最後，想到就問。<br>也可以幫別人的問題按讚，票數高的先回答</p>
+  </div>
+  <figure class="qr-card glass r"><div class="qr slido-qr"><span class="qr-ph">Slido QR code<br><small>存成 assets/img/slido-qr.png</small></span><img src="assets/img/slido-qr.png" alt="Slido 提問的 QR code" onerror="this.remove()"></div><figcaption>slido.com · #1739475</figcaption></figure>
+  <aside class="notes"><b class="cue">Slido 整場開著</b><b class="cue">可以按讚</b><b class="cue">Q&amp;A 從票數高的開始</b><span class="go">稍微介紹一下自己</span></aside>
+</section>
+
+<!-- ============ 自我介紹 ============ -->
+<section data-at="14:05" class="slide intro" data-section="intro" data-title="自我介紹">
+  <div class="speaker-cut"><img src="assets/img/speaker-cut.png?v=2" alt="講者 Luju 的去背照片"></div>
+  <div class="intro-copy">
+    <p class="kicker r">About me</p>
+    <h2 class="r">Luju</h2>
+    <p class="role r">IBM Consulting · Experience Design Team<br><strong>Senior Experience Design Consultant</strong></p>
+    <ul class="ticks r">
+      <li>復興商工美工科 → 輔大應用美術系（視傳組）</li>
+      <li>10 年設計經驗：網頁／APP 體驗設計、設計系統、設計工作坊</li>
+      <li>近期專案：企業網銀、私人銀行</li>
+    </ul>
+  </div>
+  <aside class="notes"><b class="cue">復興商工美工科 → 輔大應用美術系（視傳組）</b><b class="cue">2016 開始做設計，剛好 10 年</b><b class="cue">網頁／APP 體驗、設計系統、工作坊</b><b class="cue">企業網銀、私人銀行</b><span class="go">回頭看我的路……</span></aside>
+</section>
+
+<section data-at="14:06" class="slide career" data-section="intro" data-title="我一路都在學「怎麼做」">
+  <p class="kicker r">My path</p>
+  <h2 class="r">我一路都在學「怎麼做」</h2>
+  <ol class="path">
+    <li class="step"><em class="org">復興美工</em><b>學畫畫</b><span>想當藝術家</span></li>
+    <li class="step"><em class="org">Design Agency 設計公司</em><b>網頁設計師</b><span>鑽研 UI 介面設計</span></li>
+    <li class="step"><em class="org">Design Agency 設計公司</em><b>設計主管</b><span>帶團隊做專案</span></li>
+    <li class="step"><em class="org ibm">IBM Consulting 顧問公司</em><b>Senior Experience Design Consultant</b><span>研究、規劃、工作坊</span></li>
+  </ol>
+  <div class="works" aria-hidden="true">
+    <figure class="wk wk1"><div class="wk-media"><img src="assets/works/painting.jpg" alt=""></div><figcaption>油畫創作</figcaption></figure>
+    <figure class="wk wk2"><div class="wk-media"><video class="loop" src="assets/works/kmc.mp4" poster="assets/works/kmc-poster.jpg" muted loop playsinline preload="auto"></video></div><figcaption>高雄流行音樂中心官網</figcaption></figure>
+    <figure class="wk wk3"><div class="wk-media"><img src="assets/works/kkstream.jpg" alt=""></div><figcaption>KKStream 產品官網</figcaption></figure>
+    <figure class="wk wk4" data-client><div class="wk-media"><div class="wk-off">僅於現場播放</div></div><figcaption>富邦數位體驗人才培訓</figcaption></figure>
+  </div>
+  <div class="spectrum"><span>動手做</span><i></i><span>做判斷</span></div>
+  <aside class="notes"><b class="cue">復興美工：學畫畫、想當藝術家（油畫）</b><b class="cue">大學輔大應美視傳組 → 學平面設計</b><b class="cue">網頁設計師：鑽研 UI 介面設計（高流）</b><b class="cue">設計主管：帶團隊（KKStream）</b><b class="cue">版塊設計近五年：介面做漂亮、加動態</b><b class="cue">IBM：研究、規劃體驗、帶工作坊（富邦）</b><b class="cue">一直在精進執行力 → 主管：顧問最重要的是「腦力」</b><b class="cue">幫企業想清楚什麼值得做</b><span class="act">→ 一站一站出現</span><span class="go">然後 AI 出現了</span></aside>
+</section>
+
+<section data-at="14:07" class="slide statement" data-section="intro" data-title="直到 AI 出現">
+  <p class="kicker r">Until AI</p>
+  <h2 class="big r">直到 AI 出現，<br>我只需要決定<em class="marker">「做什麼」</em></h2>
+  <p class="lead r">動手的部分交給 AI，人的價值在判斷</p>
+  <aside class="notes"><b class="cue">學好幾年的「怎麼做」，AI 幾分鐘做完</b><b class="cue">我只要決定「做什麼」</b><b class="cue">但決定做什麼不容易：什麼才值得做？</b><span class="go">我最常用來想清楚的方法，就是設計思考</span></aside>
+</section>
+
+<!-- ============ 設計思考 ============ -->
+<section data-at="14:08" class="slide chapter" data-section="dt" data-title="章節：設計思考">
+  <canvas class="ch3d r" width="760" height="760" aria-hidden="true"></canvas>
+  <p class="num r">01</p>
+  <h2 class="r">設計思考：<br>先把問題想清楚</h2>
+  <p class="lead r">先動手，再說道理</p>
+  <aside class="notes"><b class="cue">什麼是設計思考？</b><b class="cue">先動筆暖身</b><span class="go">拿出桌上的便利貼</span></aside>
+</section>
+
+<section data-at="14:08" class="slide task" data-section="dt" data-title="暖身一：設計一個鬧鐘">
+  <div class="task-copy">
+    <p class="kicker r">Warm-up 1 · 拿出紙筆</p>
+    <h2 class="r">請設計<br>一個鬧鐘</h2>
+    <p class="lead r">畫在紙上，不用畫得好看</p>
+  </div>
+  <div class="timer r" data-timer="120" data-label="畫一個鬧鐘"></div>
+  <aside class="notes"><b class="cue">便利貼</b><b class="cue">2 分鐘</b><b class="cue">畫一個鬧鐘</b><b class="cue">不用畫得漂亮</b><span class="act">→ 開始倒數，走下台看看</span><span class="go">時間到，你畫的是不是這些？</span></aside>
+</section>
+
+<section data-at="14:11" class="slide bleed scene" data-section="dt" data-scene="clock" data-title="大部分人畫的鬧鐘">
+  <div class="scene-bg" aria-hidden="true"></div>
+  <canvas class="scene3d" width="1552" height="852" aria-hidden="true"></canvas>
+  <div class="caption glass r"><p class="kicker">你畫的是不是這些？</p><h3>大部分人都在畫「鬧鐘」這個物品</h3></div>
+  <aside class="notes"><b class="cue">圓的、方的、兩個鈴鐺</b><b class="cue">大家都在畫「東西」</b><span class="go">我們換一個題目</span></aside>
+</section>
+
+<section data-at="14:11" class="slide task" data-section="dt" data-title="暖身二：幸福的喚醒方式">
+  <div class="task-copy">
+    <p class="kicker r">Warm-up 2 · 換個題目</p>
+    <h2 class="r">請設計一個<br><span class="nw"><em>幸福的</em>喚醒方式</span></h2>
+    <p class="lead r">一樣畫在紙上，想想你最想怎麼被叫醒</p>
+  </div>
+  <div class="timer r" data-timer="120" data-label="幸福的喚醒方式"></div>
+  <aside class="notes"><b class="cue">設計「幸福的喚醒方式」</b><b class="cue">你最想怎麼被叫醒？</b><b class="cue">2 分鐘</b><span class="act">→ 倒數；時間到請 2–3 人分享</span><span class="go">大家的答案是不是這些</span></aside>
+</section>
+
+<section data-at="14:14" class="slide bleed scene" data-section="dt" data-scene="wake4" data-title="幸福的喚醒方式">
+  <div class="scene-bg four" aria-hidden="true"><i><span>咖啡香</span></i><i><span>陽光</span></i><i><span>家人</span></i><i><span>寵物</span></i></div>
+  <canvas class="scene3d" width="1552" height="852" aria-hidden="true"></canvas>
+  <div class="caption glass r"><p class="kicker">這次大家畫了什麼？</p><h3>咖啡香、陽光、家人、寵物⋯⋯<br>已經不是鬧鐘了</h3></div>
+  <aside class="notes"><b class="cue">咖啡香、陽光、家人、寵物</b><b class="cue">已經不是鬧鐘了</b><span class="go">這兩題問的其實是同一件事</span></aside>
+</section>
+
+<section data-at="14:14" class="slide compare" data-section="dt" data-title="產品導向 vs 使用者為中心">
+  <h2 class="r">同一件事，換一個問法</h2>
+  <div class="vs">
+    <div class="card glass r"><p class="tag">A · Product-driven</p><h3>設計一個鬧鐘</h3><p>以「產品」為起點，<br>答案大多長得差不多</p></div>
+    <div class="arrow r" aria-hidden="true">→</div>
+    <div class="card glass hl step"><p class="tag">B · User-centered</p><h3>設計一個幸福的<br>喚醒方式</h3><p>以「使用者」為起點，<br>解法一下子變多了</p></div>
+  </div>
+  <aside class="notes"><b class="cue">同一件事、問法不同</b><b class="cue">從東西出發 vs 從人出發</b><b class="cue">題目沒變難，起點換了</b><span class="go">那設計思考到底是什麼？</span></aside>
+</section>
+
+<section data-at="14:15" class="slide postits" data-section="dt" data-title="設計思考是什麼？">
+  <h2 class="r">設計思考是：</h2>
+  <p class="q step">一張便利貼？</p>
+  <p class="q2 step">還是，一大堆便利貼？</p>
+  <div class="notes-cloud" aria-hidden="true"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i><i style="--k:10"></i><i style="--k:11"></i></div>
+  <ol class="two"><li class="step ans"><b>答案</b>以使用者為中心，思考解決方案</li></ol>
+  <aside class="notes"><b class="cue">一張便利貼？一大堆便利貼？</b><b class="cue">都不是（停一下）</b><b class="cue">以使用者為中心，思考解決方案 ✓</b><b class="cue">剛剛暖身時大家已經用到設計思考了</b><span class="act">→ 逐個出現；停一下直接講答案</span><span class="go">IDEO 的 Tim Brown 這樣定義</span></aside>
+</section>
+
+<section data-at="14:15" class="slide quote" data-section="dt" data-title="Tim Brown 的定義">
+  <p class="mark r">“</p>
+  <blockquote class="r">設計思考是一個以人為本的創新方法，<br>整合<em>人的需求</em>、<em>科技的可能性</em>，<br>以及<em>商業成功</em>的需求。</blockquote>
+  <p class="cite r">Tim Brown · IDEO</p>
+  <img class="portrait r" src="assets/img/tim-brown.png" alt="IDEO 執行長 Tim Brown">
+  <aside class="notes"><b class="cue">IDEO Tim Brown</b><b class="cue">以人為本的創新方法</b><b class="cue">（畫面上有完整原文，講重點就好）</b><b class="cue">只照顧人夠不夠？</b><span class="go">我們用三個圈來看</span></aside>
+</section>
+
+<section data-at="14:16" class="slide venn" data-section="dt" data-title="三個圈">
+  <h2 class="r">從「人」開始，在交集找答案</h2>
+  <div class="circles r">
+    <div class="c human"><b>用戶需求</b><span>Desirability</span><em>Start here</em></div>
+    <div class="c biz step"><b>商業價值</b><span>Viability</span></div>
+    <div class="c tech step"><b>科技可行性</b><span>Feasibility</span></div>
+    <div class="overlap step" aria-hidden="true"><i><i><i></i></i></i></div>
+    <svg class="pointer" viewBox="0 0 760 600" aria-hidden="true"><path d="M392 318 C 470 250, 540 170, 640 140"/><circle cx="392" cy="318" r="7"/></svg>
+    <div class="sweet"><small>三者的交集 · Sweet spot</small>好的解法</div>
+  </div>
+  <aside class="notes"><b class="cue">人：想不想要</b><b class="cue">商業：能不能長久</b><b class="cue">科技：做不做得出來</b><b class="cue">交集＝好解法，先從人開始</b><span class="act">→ 一圈一圈出現</span><span class="go">先來看一個例子</span></aside>
+</section>
+
+<section data-at="14:16" class="slide ladder-q" data-section="dt" data-title="小男孩的需求是什麼？">
+  <img class="kid r" src="assets/img/ladder-kids.jpg" alt="三個小孩攀在木圍牆上，最左邊的男孩搆不到頂端">
+  <div class="ladder-copy">
+    <p class="kicker r">Think</p>
+    <h2 class="r">最左邊這個小男孩，<br>需要的是什麼？</h2>
+    <p class="lead step">直覺答案：一把梯子。真的嗎？</p>
+  </div>
+  <aside class="notes"><b class="cue">小男孩需要什麼？</b><b class="cue">第一直覺：梯子</b><b class="cue">真的只要梯子？</b><span class="act">問完等一下台下</span><span class="go">我們一層一層往上問</span></aside>
+</section>
+
+<section data-at="14:17" class="slide ladder" data-section="dt" data-title="往上問 Why">
+  <h2 class="r">往根本需求想，解法會更多</h2>
+  <div class="stair">
+    <div class="how-band" aria-hidden="true"><span>How · 具體的解法</span></div>
+    <div class="lvl first r">
+      <svg viewBox="0 0 1600 900" aria-hidden="true"><path class="how" pathLength="1" d="M200 660 L193.0 724"/><path class="how" pathLength="1" d="M320 660 L353.0 724"/></svg>
+      <span class="need" style="left:120px;top:584px">想爬上去</span><span class="chip hl" style="left:118px;top:724px;--j:1">梯子</span><span class="chip" style="left:278px;top:724px;--j:1">椅子</span>
+    </div>
+    <div class="lvl step">
+      <svg viewBox="0 0 1600 900" aria-hidden="true"><path class="why" pathLength="1" d="M330 578 C 330 518.0, 390 518.0, 466 518.0"/><polygon class="why-head" points="478,518.0 462,509.0 462,527.0"/><path class="how" pathLength="1" d="M560 556 L553.0 724"/><path class="how" pathLength="1" d="M680 556 L713.0 724"/></svg>
+      <span class="why-tag" style="left:296px;top:456.0px">Why ↑</span><span class="need" style="left:480px;top:480px">想看到對面</span><span class="chip" style="left:478px;top:724px;--j:1">電鑽</span><span class="chip" style="left:638px;top:724px;--j:1">自拍棒</span>
+    </div>
+    <div class="lvl step">
+      <svg viewBox="0 0 1600 900" aria-hidden="true"><path class="why" pathLength="1" d="M690 474 C 690 414.0, 750 414.0, 826 414.0"/><polygon class="why-head" points="838,414.0 822,405.0 822,423.0"/><path class="how" pathLength="1" d="M920 452 L913.0 724"/><path class="how" pathLength="1" d="M1040 452 L1073.0 724"/></svg>
+      <span class="why-tag" style="left:656px;top:352.0px">Why ↑</span><span class="need" style="left:840px;top:376px">想融入同儕</span><span class="chip" style="left:838px;top:724px;--j:1">麥當勞</span><span class="chip" style="left:998px;top:724px;--j:1">Switch</span>
+    </div>
+    <div class="lvl step">
+      <svg viewBox="0 0 1600 900" aria-hidden="true"><path class="why" pathLength="1" d="M1050 370 C 1050 310.0, 1110 310.0, 1186 310.0"/><polygon class="why-head" points="1198,310.0 1182,301.0 1182,319.0"/><path class="how" pathLength="1" d="M1340.0 348 L1340.0 724"/></svg>
+      <span class="why-tag" style="left:1016px;top:248.0px">Why ↑</span><span class="need top" style="left:1200px;top:272px">有趣的話題</span><span class="chip more" style="left:1265px;top:724px;--j:0">⋯⋯</span>
+    </div>
+    <p class="legend r"><b class="up">↗ Why</b>往上問背後的需求<b class="down">↓ How</b>往下想具體的解法</p>
+  </div>
+  <aside class="notes"><b class="cue">爬上去 → 梯子、椅子</b><b class="cue">看另一邊 → 挖洞、自拍棒</b><b class="cue">加入朋友 → 麥當勞、Switch</b><b class="cue">隔天想插得上話 → 解法數不完</b><b class="cue">往上問 Why，往下問 How</b><span class="act">→ 每按一次往上一層</span><span class="go">再分享一個真實的例子</span></aside>
+</section>
+
+<section data-at="14:18" class="slide bleed" data-section="dt" data-title="武嶺：太暗找不到停車場">
+  <img src="assets/img/wuling-stars.jpg" alt="武嶺停車場上方的銀河星空">
+  <div class="caption top glass r"><p class="kicker">民眾反應</p><h3>「停車場入口太暗，找不到停車場」</h3><p class="step">如果你是公路局局長，你會怎麼做？</p></div>
+  <aside class="notes"><b class="cue">武嶺停車場入口太暗</b><b class="cue">如果你是局長？</b><span class="act">讓台下喊：裝路燈</span><span class="go">對，局長也是這樣想</span></aside>
+</section>
+
+<section data-at="14:19" class="slide bleed" data-section="dt" data-title="武嶺：裝了路燈之後">
+  <img src="assets/img/wuling-lights.jpg" alt="停車場裝上路燈後，星空變得黯淡">
+  <div class="caption top glass r"><p class="kicker">局長：「太暗？那我給你一盞路燈！」</p><h3 class="step">結果：天文迷抗議光害，銀河都看不見了</h3><p class="step">路燈裝上沒多久就被拆除（2016 年）</p></div>
+  <aside class="notes"><b class="cue">裝了路燈</b><b class="cue">看星星的人抗議光害</b><b class="cue">2016 年拆掉</b><span class="go">那問題出在哪裡？</span></aside>
+</section>
+
+<section data-at="14:19" class="slide wuling" data-section="dt" data-title="武嶺：深層需求">
+  <h2 class="r">民眾半夜來武嶺停車，想做什麼？</h2>
+  <div class="ladder2">
+    <div class="lv r"><span class="tag">具體問題</span><b>路口太暗</b></div>
+    <div class="lv deep step"><span class="tag">深層需求</span><b>停好車，看滿天星海</b></div>
+    <div class="lv step"><span class="tag">具體解方</span><b>保護星空，改用反光條</b></div>
+  </div>
+  <img class="news step" src="assets/img/news-dark-sky.jpg" alt="合歡山暗空觀星獲國際認證的新聞">
+  <aside class="notes"><b class="cue">半夜上武嶺是要做什麼？</b><b class="cue">真正想要：停好車、看星空</b><b class="cue">改用反光條</b><span class="go">這兩個例子在說同一件事</span></aside>
+</section>
+
+<section data-at="14:20" class="slide linear" data-section="dt" data-title="先定義問題">
+  <h2 class="r">「問題 → 解法」太快了</h2>
+  <p class="lead r">直線式的思考，容易錯過問題背後真正的需求</p>
+  <div class="lanes">
+    <div class="lane straight r">
+      <p class="lane-tag">直線思考</p>
+      <div class="track"><span class="box">問題</span><span class="line"></span><span class="box">解法</span></div>
+      <p class="lane-note">一條路走到底</p>
+    </div>
+    <div class="lane tree step">
+      <p class="lane-tag">先定義問題</p>
+      <div class="tree-map">
+        <svg viewBox="0 0 760 460" aria-hidden="true"><path class="stem" pathLength="1" d="M138 230 L190 230"/><path pathLength="1" style="--d:0.00s" d="M410 230 C 490 230, 480 50, 560 50"/><path pathLength="1" style="--d:0.12s" d="M410 230 C 490 230, 480 140, 560 140"/><path pathLength="1" style="--d:0.24s" d="M410 230 C 490 230, 480 230, 560 230"/><path pathLength="1" style="--d:0.36s" d="M410 230 C 490 230, 480 320, 560 320"/><path pathLength="1" style="--d:0.48s" d="M410 230 C 490 230, 480 410, 560 410"/></svg>
+        <span class="box start">問題</span>
+        <span class="box hl hub">定義問題</span>
+        <span class="box ghost node" style="top:50px;--d:0.35s">解法 A</span><span class="box ghost node" style="top:140px;--d:0.47s">解法 B</span><span class="box ghost node" style="top:230px;--d:0.59s">解法 C</span><span class="box ghost node" style="top:320px;--d:0.71s">解法 D</span><span class="box ghost node" style="top:410px;--d:0.83s">解法 E</span>
+      </div>
+      <p class="lane-note">問題想清楚，路就變多</p>
+    </div>
+  </div>
+  <aside class="notes"><b class="cue">看到問題就想解法</b><b class="cue">中間多停一步：先定義問題</b><b class="cue">路會多很多</b><span class="act">→ 出現第二條路</span><span class="go">那要怎麼換個問法？</span></aside>
+</section>
+
+<section data-at="14:20" class="slide chapter hmw-ch" data-section="dt" data-title="章節：How Might We">
+  <div class="hc-copy">
+    <p class="kicker r">Tool · 換個問法</p>
+    <h2 class="r">How Might We</h2>
+    <p class="lead r">我們可以如何……？</p>
+  </div>
+  <ol class="hc-words r">
+    <li><b>How</b><span>相信有方法</span></li>
+    <li><b>Might</b><span>答案不只一種</span></li>
+    <li><b>We</b><span>大家一起想</span></li>
+  </ol>
+  <aside class="notes"><b class="cue">How Might We＝我們可以如何……</b><b class="cue">How 相信有方法</b><b class="cue">Might 答案不只一種</b><b class="cue">We 大家一起想</b><span class="act">快速帶過</span><span class="go">用早八來試試看</span></aside>
+</section>
+
+<section data-at="14:20" class="slide hmw" data-section="dt" data-title="HMW 示範">
+  <p class="kicker r">How Might We</p>
+  <h2 class="r">換個問法，問題就不一樣</h2>
+  <div class="vs">
+    <div class="card glass r"><p class="tag">01 · Problem</p><h3>早八總是<br>爬不起來</h3></div>
+    <div class="arrow r" aria-hidden="true">→</div>
+    <div class="card glass hl step"><p class="tag">02 · How might we</p><h3>我們可以如何讓<br>「起床」<span class="nw">不再那麼痛苦？</span></h3></div>
+  </div>
+  <aside class="notes"><b class="cue">用早八試試看</b><b class="cue">早八爬不起來 → 讓起床不那麼痛苦</b><b class="cue">不只想到更大聲的鬧鐘</b><span class="go">要寫出好的 HMW，先用 5 Why 往上挖</span></aside>
+</section>
+
+<section data-at="14:21" class="slide why5" data-section="dt" data-title="5 Why：往上挖到根本需求">
+  <p class="kicker r">Method · 5 Why</p>
+  <h2 class="r">連問 5 次「為什麼」，找到真正的需求</h2>
+  <div class="why5-body">
+    <ol class="chain">
+      <li class="lv0 r"><span class="q">問題</span><b>早八總是爬不起來</b></li>
+      <li class="step"><span class="q"><em>Why 1</em>為什麼爬不起來？</span><b>前一晚太晚睡</b></li>
+      <li class="step"><span class="q"><em>Why 2</em>為什麼太晚睡？</span><b>睡前一直滑手機，停不下來</b></li>
+      <li class="step"><span class="q"><em>Why 3</em>為什麼停不下來？</span><b>想多放鬆一下才甘願睡</b></li>
+      <li class="step"><span class="q"><em>Why 4</em>為什麼要放鬆那麼久？</span><b>一整天下來，只有這時候是自己的</b></li>
+      <li class="root step"><span class="q"><em>Why 5</em>為什麼只有這時候？</span><b>白天都在配合課表和別人的安排</b></li>
+    </ol>
+    <div class="tips glass r">
+      <p class="tag">怎麼問</p>
+      <ol>
+        <li><b>拿上一個答案再問</b>每一次都接著前一句問「為什麼？」</li>
+        <li><b>答案寫事實或感受</b>不要寫成解法，例如「買一個更大聲的鬧鐘」</li>
+        <li><b>問到「人」就可以停</b>出現感受或動機就能停，不必剛好 5 次</li>
+      </ol>
+    </div>
+  </div>
+  <aside class="notes"><b class="cue">太晚睡 → 滑手機 → 想放鬆 → 只有這段屬於自己 → 白天都在配合別人</b><b class="cue">寫發生什麼、感受，不寫解法</b><b class="cue">問到動機就可以停</b><span class="act">→ 一層一層出現</span><span class="go">那要從哪一層寫？</span></aside>
+</section>
+
+<section data-at="14:22" class="slide hmw-lv" data-section="dt" data-title="從哪一層寫 HMW">
+  <p class="kicker r">How Might We · 找對層次</p>
+  <h2 class="r">從哪一層寫 HMW？</h2>
+  <div class="bands">
+    <div class="band narrow r"><span class="lvl-tag">太窄<small>貼著解法</small></span><p class="hmw-card"><small class="from">只想到一個做法</small>我們可以如何讓<b>鬧鐘更大聲</b>？</p><span class="verdict">答案只剩一個</span></div>
+    <div class="band good step"><span class="lvl-tag">剛剛好<small>Why 1–3</small></span><div class="cards"><p class="hmw-card"><small class="from">接 Why 1・太晚睡</small>我們可以如何讓人<b>更願意早點上床</b>？</p><p class="hmw-card"><small class="from">接 Why 3・想多放鬆一下</small>我們可以如何讓人<b>不靠滑手機也能放鬆</b>？</p></div><span class="verdict">想得出很多種解法</span></div>
+    <div class="band broad step"><span class="lvl-tag">太廣<small>Why 5</small></span><p class="hmw-card"><small class="from">接 Why 5・都在配合別人</small>我們可以如何讓<b>大學生的生活更自由</b>？</p><span class="verdict">太大，不知道從哪想</span></div>
+  </div>
+  <p class="rule step">好的 HMW：<b>窄到能馬上開始想，寬到留得下好幾種解法。</b></p>
+  <aside class="notes"><b class="cue">太窄：鬧鐘更大聲（已是解法）</b><b class="cue">剛好：早點上床、不滑手機也能放鬆</b><b class="cue">太廣：讓大學生的生活更自由（不知從哪想）</b><b class="cue">小到能開始想，大到有好幾種做法</b><span class="act">→ 太窄 → 剛好 → 太廣 → 原則</span><span class="go">卡住的話，有 8 個切入點</span></aside>
+</section>
+
+<section data-at="14:23" class="slide hmw8" data-section="dt" data-title="8 個 HMW 切入點">
+  <p class="kicker r">延伸工具 · 寫 HMW 卡住時</p>
+  <h2 class="r">換個角度，HMW 就寫得出來</h2>
+  <p class="lead r"><span class="ctx">情境</span>早八總是爬不起來　→　挑一個角度，接在<b>「我們可以如何⋯⋯」</b>後面</p>
+  <ol class="angles"><li class="glass step" style="--i:0"><h3><em>01</em>增加好的部分</h3><p class="hmw-say"><small>例</small>讓起床後，馬上有一件值得期待的事？</p></li><li class="glass step" style="--i:1"><h3><em>02</em>減去不好的部分</h3><p class="hmw-say"><small>例</small>減少離開被窩那一刻的痛苦？</p></li><li class="glass step" style="--i:2"><h3><em>03</em>把負面轉成機會</h3><p class="hmw-say"><small>例</small>把「賴床的五分鐘」變成慢慢清醒的時間？</p></li><li class="glass step" style="--i:3"><h3><em>04</em>挑戰理所當然</h3><p class="hmw-say"><small>例</small>讓鬧鐘不再是唯一的起床方式？</p></li><li class="glass step" style="--i:4"><h3><em>05</em>增加自主感</h3><p class="hmw-say"><small>例</small>讓人自己決定怎麼被叫醒？</p></li><li class="glass step" style="--i:5"><h3><em>06</em>改變發生的時機</h3><p class="hmw-say"><small>例</small>讓早上的手忙腳亂，前一晚就先處理掉？</p></li><li class="glass step" style="--i:6"><h3><em>07</em>照顧不同需求</h3><p class="hmw-say"><small>例</small>讓淺眠的人和叫不醒的人，各有適合的起床方式？</p></li><li class="glass step" style="--i:7"><h3><em>08</em>借用其他情境</h3><p class="hmw-say"><small>例</small>讓起床像玩遊戲一樣，有破關的成就感？</p></li></ol>
+  <aside class="notes"><b class="cue key">每張：標題 → 一句白話 → 念例句</b><b class="cue">01 好事變更多</b><b class="cue">02 最痛那刻變少</b><b class="cue">03 壞事換角度變好事</b><b class="cue">04「本來就這樣」？真的嗎</b><b class="cue">05 讓人自己決定</b><b class="cue">06 挪到別的時間做</b><b class="cue">07 不同的人需要不一樣</b><b class="cue">08 把別處的好經驗搬過來</b><span class="act">落後時只講 2–3 個，其他快速按過</span><span class="go">我們來分組練習</span></aside>
+</section>
+
+<section data-at="14:24" class="slide task" data-section="dt" data-title="練習：分組用 HMW 改寫問題">
+  <div class="task-copy">
+    <p class="kicker r">Practice · 分組討論</p>
+    <h2 class="r">分組用 HMW<br>改寫一個問題</h2>
+    <p class="task-topic glass r"><small>全班同一題</small>作業總是拖到截止前一晚才開始做</p>
+    <ol class="steps notes-color r">
+      <li data-phase="360"><i class="pi y"></i>黃色：每人寫一次自己拖到最後一晚的經驗</li>
+      <li data-phase="300"><i class="pi g"></i>綠色：選一個，一起用 5 Why 往上問</li>
+      <li data-phase="120"><i class="pi b"></i>藍色：挑剛剛好的一層，寫成「我們可以如何⋯⋯？」</li>
+    </ol>
+  </div>
+  <div class="task-side">
+    <figure class="wall-guide step pre"><p class="wg-h">便利貼這樣貼</p><svg viewBox="0 0 660 470" aria-hidden="true"><line x1="220" y1="20" x2="220" y2="460" class="div"/><line x1="440" y1="20" x2="440" y2="460" class="div"/><text x="110" y="44" class="zh y">① 經驗</text><text x="330" y="44" class="zh g">② 5 Why</text><text x="550" y="44" class="zh b">③ HMW</text><rect x="46" y="80" width="60" height="60" rx="6" fill="#f7d64a"/><text x="76.0" y="119.0" text-anchor="middle">經驗</text><rect x="114" y="80" width="60" height="60" rx="6" fill="#f7d64a"/><text x="144.0" y="119.0" text-anchor="middle">經驗</text><rect x="46" y="152" width="60" height="60" rx="6" fill="#f7d64a"/><text x="76.0" y="191.0" text-anchor="middle">經驗</text><rect x="114" y="152" width="60" height="60" rx="6" fill="#f7d64a"/><text x="144.0" y="191.0" text-anchor="middle">經驗</text><rect x="275" y="76" width="110" height="80" rx="6" fill="#7fcf8a"/><text x="330.0" y="125.0" text-anchor="middle">Why 1</text><rect x="275" y="176" width="110" height="80" rx="6" fill="#7fcf8a"/><text x="330.0" y="225.0" text-anchor="middle">Why 2</text><rect x="275" y="276" width="110" height="80" rx="6" fill="#7fcf8a"/><text x="330.0" y="325.0" text-anchor="middle">Why 3</text><rect x="275" y="376" width="110" height="60" rx="6" fill="#7fcf8a"/><text x="330.0" y="415.0" text-anchor="middle">…</text><rect x="495" y="176" width="110" height="80" rx="6" fill="#6fb0f0"/><text x="550.0" y="225.0" text-anchor="middle">HMW</text></svg><figcaption>一區一種顏色，每區由上往下貼</figcaption></figure>
+    <div class="timer sm r" data-timer="360" data-label="分組 HMW 練習"></div>
+    <div class="task-btns r"><button type="button" data-guide>便利貼擺法</button><button type="button" data-reset>倒數重來</button></div>
+    <div class="cheat r"><p class="cheat-h">卡住時，換個角度</p><p class="cheat-w">放大好的・減少壞的・負面變機會・挑戰理所當然<br>增加自主・換個時機・照顧不同人・借用情境</p></div>
+  </div>
+  <aside class="notes"><b class="cue key">做法跟早八示範一樣，換題目</b><b class="cue">題目：作業拖到截止前一晚</b><b class="cue">黃（1 分）：自己的經驗</b><b class="cue">綠（3 分）：挑一張，5 Why 往上問</b><b class="cue">藍（2 分）：挑一層寫「我們可以如何……」</b><b class="cue">卡住看右下小抄・不用上台</b><span class="act">→ 便利貼擺法：分三區，一區一種顏色、由上往下貼 → 倒數（示意圖收起，B 或右下按鈕可再打開）；0 或「倒數重來」＝回到 6:00，再按 → 開始；步驟會依時間自動亮起（剩 5:00 換綠、剩 2:00 換藍），你在各組間走動</span><span class="go">時間到，來看看可以怎麼想</span></aside>
+</section>
+
+<!-- ============ 專案實戰 ============ -->
+<section data-at="14:31" class="slide hmw8 think" data-section="dt" data-title="參考思路：同一題可以這樣想">
+  <p class="kicker r">參考思路</p>
+  <h2 class="r">同一題，可以這樣想</h2>
+  <p class="lead r"><span class="ctx">題目</span>作業總是拖到截止前一晚才開始做</p>
+  <ol class="think-rows">
+    <li class="glass step"><p class="why"><small>挖到的原因</small>想不出要做什麼</p><span class="arrow" aria-hidden="true">→</span><p class="how"><small>寫成 HMW</small>我們可以如何讓<b>想法更快定下來</b>？</p></li>
+    <li class="glass step"><p class="why"><small>挖到的原因</small>只在腦中想，沒有動手試</p><span class="arrow" aria-hidden="true">→</span><p class="how"><small>寫成 HMW</small>我們可以如何讓<b>第一步小到馬上能動手</b>？</p></li>
+    <li class="glass step"><p class="why"><small>挖到的原因</small>怕做得不完美被否定</p><span class="arrow" aria-hidden="true">→</span><p class="how"><small>寫成 HMW</small>我們可以如何讓人<b>不怕先交出不完美的第一版</b>？</p></li>
+  </ol>
+  <p class="check step">寫完問自己：<b>想得出一個明天就能試的做法嗎？</b></p>
+  <aside class="notes"><b class="cue">想不出要做什麼 → 想法更快定下來</b><b class="cue">沒動手 → 第一步小到馬上開始</b><b class="cue">怕被否定 → 不怕先交出不完美的第一版</b><b class="cue">明天能試嗎？太大／太小</b><span class="act">→ 一列一列出現</span><span class="go">業界做專案會長什麼樣子？</span></aside>
+</section>
+
+<section data-at="14:32" class="slide chapter" data-section="case" data-title="章節：專案實戰">
+  <canvas class="ch3d r" width="760" height="760" aria-hidden="true"></canvas>
+  <p class="num r">02</p>
+  <h2 class="r">專案實戰：<br>一個真的上線的專案</h2>
+  <p class="lead r">設計思考在業界，實際長什麼樣子？</p>
+  <aside class="notes"><b class="cue">剛剛是基本功</b><b class="cue">看一個已上線的專案</b><span class="go">先看一段兩分半的影片</span></aside>
+</section>
+
+<section data-at="14:32" class="slide video" data-section="case" data-title="成果影片">
+  <div class="video-off glass"><span>▶</span><b>成果影片</b><p>影片僅於講座現場播放</p></div>
+  <aside class="notes"><b class="cue">影片約 2 分 30 秒</b><span class="act">→ 播放；結束再按 →</span><span class="go">這就是我們一起做的專案</span></aside>
+</section>
+
+<section data-at="14:35" class="slide process" data-section="case" data-title="拆解：四個步驟">
+  <h2 class="r">拆開來看，每一步都有目的</h2>
+  <ol class="stages">
+    <li class="glass r"><b>01</b><h3>策略目標工作坊</h3><p>先確立內部共識與目標</p><span class="why">目的：<br>大家要解的是同一個問題</span></li>
+    <li class="glass step"><b>02</b><h3>使用者研究</h3><p>聆聽真實使用者的聲音</p><span class="why">目的：<br>找出使用者真正卡住的地方</span></li>
+    <li class="glass step"><b>03</b><h3>設計思考工作坊</h3><p>對焦問題，創意共創</p><span class="why">目的：<br>多元觀點，產出更多可能</span></li>
+    <li class="glass step"><b>04</b><h3>易用性測試</h3><p>小步快跑，<span class="nw">快速驗證迭代</span></p><span class="why">目的：<br>用最低成本確認方向對不對</span></li>
+  </ol>
+  <aside class="notes"><b class="cue key">對齊共識 → 聆聽需求 → 發想點子 → 快速驗證</b><b class="cue key">內部 → 使用者 → 內部 → 使用者</b><b class="cue">策略目標工作坊</b><b class="cue">使用者研究</b><b class="cue">設計思考工作坊</b><b class="cue">易用性測試</b><b class="cue">以人為本、多元觀點、快速迭代</b><span class="go">我們一步一步來看</span></aside>
+</section>
+
+<section data-at="14:36" class="slide stage-d" data-section="case" data-title="步驟 01：策略目標工作坊">
+  <ol class="stepper r"><li class="on"><b>01</b>策略目標工作坊</li><li class=""><b>02</b>使用者研究</li><li class=""><b>03</b>設計思考工作坊</li><li class=""><b>04</b>易用性測試</li></ol>
+  <div class="sd-body">
+    <div class="sd-main">
+      <b class="sd-num r">01</b>
+      <h2 class="r">策略目標工作坊</h2>
+      <p class="lead r">先確立內部共識與目標</p>
+      <p class="sd-why r"><small>目的</small>大家要解的是同一個問題</p>
+    </div>
+    <div class="sd-side">
+      <figure class="sd-photo glass r"><img src="assets/img/stage-01.jpg?v=5" alt="大家把心中的「好銀行 App」寫下來，再用貼點投票對齊目標"><figcaption>大家把心中的「好銀行 App」寫下來，再用貼點投票對齊目標</figcaption></figure>
+      <div class="sd-class glass step"><p class="tag">換成你的作業</p><p>動手前，先和組員對齊：這題到底要解決什麼？</p></div>
+    </div>
+  </div>
+  <aside class="notes"><b class="cue key">① 對齊共識｜各利害關係人｜要解什麼？什麼叫好？</b><b class="cue">同一艘船，別各自往不同方向划</b><b class="cue">比會議輕鬆，大家平等發表想法</b><b class="cue key">研究「前」→ 產出目標（≠ 03 產出點子）</b><b class="cue">各部門寫「好的銀行 App」</b><b class="cue">貼點投票對齊目標</b><b class="cue">每個部門的「好」不一樣</b><span class="act">→ 換成你的作業：先確認要解什麼</span><span class="go">第二步是去聽使用者</span></aside>
+</section>
+
+<section data-at="14:37" class="slide stage-d" data-section="case" data-title="步驟 02：使用者研究">
+  <ol class="stepper r"><li class="done"><b>01</b>策略目標工作坊</li><li class="on"><b>02</b>使用者研究</li><li class=""><b>03</b>設計思考工作坊</li><li class=""><b>04</b>易用性測試</li></ol>
+  <div class="sd-body">
+    <div class="sd-main">
+      <b class="sd-num r">02</b>
+      <h2 class="r">使用者研究</h2>
+      <p class="lead r">聆聽真實使用者的聲音</p>
+      <p class="sd-why r"><small>目的</small>找出使用者真正卡住的地方</p>
+    </div>
+    <div class="sd-side">
+      <figure class="sd-photo glass r"><img src="assets/img/stage-02.jpg?v=5" alt="訪談：請使用者邊操作手機、邊說出心裡的想法"><figcaption>訪談：請使用者邊操作手機、邊說出心裡的想法</figcaption></figure>
+      <div class="sd-class glass step"><p class="tag">換成你的作業</p><p>去現場觀察、訪談真的會用的人，不只靠自己想像</p></div>
+    </div>
+  </div>
+  <aside class="notes"><b class="cue key">② 聆聽需求｜真實使用者｜卡在哪？</b><b class="cue">觀察操作：痛點、沒被滿足的需求</b><b class="cue key">用「現在的東西」→ 找問題（≠ 04 驗證解法）</b><b class="cue key">＝ The Loop 觀察</b><b class="cue">邊操作邊說出想法</b><b class="cue">客戶躲在另一個房間聽</b><b class="cue">客戶：「一定很多人註冊」→ 使用者：「資訊太多，懶得看」</b><b class="cue">真心話常跟我們想的不一樣</b><span class="act">講完故事停一下；→ 換成你的作業</span><span class="go">第三步是工作坊</span></aside>
+</section>
+
+<section data-at="14:38" class="slide stage-d" data-section="case" data-title="步驟 03：設計思考工作坊">
+  <ol class="stepper r"><li class="done"><b>01</b>策略目標工作坊</li><li class="done"><b>02</b>使用者研究</li><li class="on"><b>03</b>設計思考工作坊</li><li class=""><b>04</b>易用性測試</li></ol>
+  <div class="sd-body">
+    <div class="sd-main">
+      <b class="sd-num r">03</b>
+      <h2 class="r">設計思考工作坊</h2>
+      <p class="lead r">對焦問題，創意共創</p>
+      <p class="sd-why r"><small>目的</small>多元觀點，產出更多可能</p>
+    </div>
+    <div class="sd-side">
+      <figure class="sd-photo glass r"><img src="assets/img/stage-03.jpg?v=5" alt="不同部門一起站到牆前，對焦問題、收斂點子"><figcaption>不同部門一起站到牆前，對焦問題、收斂點子</figcaption></figure>
+      <div class="sd-class glass step"><p class="tag">換成你的作業</p><p>組員各自發想，再一起收斂，不急著選第一個點子</p></div>
+    </div>
+  </div>
+  <aside class="notes"><b class="cue key">③ 發想點子｜業務、IT、行銷、客服｜要怎麼解？</b><b class="cue key">研究「後」→ 產出點子（≠ 01 產出目標）</b><b class="cue key">＝ The Loop 反思</b><b class="cue">不同部門站到牆前</b><b class="cue">先對焦、再收斂</b><b class="cue">業務、IT、客服看到的不一樣</b><span class="act">→ 換成你的作業：先各自想再收斂</span><span class="go">最後是易用性測試</span></aside>
+</section>
+
+<section data-at="14:39" class="slide stage-d" data-section="case" data-title="步驟 04：易用性測試">
+  <ol class="stepper r"><li class="done"><b>01</b>策略目標工作坊</li><li class="done"><b>02</b>使用者研究</li><li class="done"><b>03</b>設計思考工作坊</li><li class="on"><b>04</b>易用性測試</li></ol>
+  <div class="sd-body">
+    <div class="sd-main">
+      <b class="sd-num r">04</b>
+      <h2 class="r">易用性測試</h2>
+      <p class="lead r">小步快跑，快速驗證迭代</p>
+      <p class="sd-why r"><small>目的</small>用最低成本確認方向對不對</p>
+    </div>
+    <div class="sd-side">
+      <figure class="sd-photo glass r"><img src="assets/img/stage-04.jpg?v=5" alt="請使用者實際操作原型，觀察他在哪裡停下來"><figcaption>請使用者實際操作原型，觀察他在哪裡停下來</figcaption></figure>
+      <div class="sd-class glass step"><p class="tag">換成你的作業</p><p>先做粗略的版本給同學試用，看他們在哪裡卡住</p></div>
+    </div>
+  </div>
+  <aside class="notes"><b class="cue key">④ 快速驗證｜使用者＋原型｜解對了嗎？</b><b class="cue">最重要：避免花大錢做出沒人用的產品</b><b class="cue key">試「我們的原型」→ 驗證解法（≠ 02 找問題）</b><b class="cue key">＝ The Loop 動手做</b><b class="cue">使用者操作原型</b><b class="cue">看哪裡停、哪裡猶豫</b><b class="cue">做一點測一點</b><span class="act">→ 換成你的作業：做粗略版給同學試</span><span class="go">最後快速看改版前後</span></aside>
+</section>
+
+<section data-at="14:40" class="slide ba" data-section="case" data-title="高雄銀行 App 改版前後">
+  <p class="kicker r">Before / After</p>
+  <h2 class="r">高雄銀行 App，改版前後</h2>
+  <div class="ba-row">
+    <figure class="ba-ph ba-before r"><div class="scr wk-off">僅於現場播放</div><figcaption>改版前</figcaption></figure>
+    <div class="ba-after step">
+      <span class="ba-arrow" aria-hidden="true">→</span>
+      <figure class="ba-ph ba-new"><div class="scr wk-off">僅於現場播放</div><figcaption>改版後</figcaption></figure>
+    </div>
+  </div>
+  <div class="ba-stat glass">
+    <p class="ba-k">App Store 評分</p>
+    <p class="ba-num"><span class="was">1.6</span><span class="to">→</span><b>3.9<i>★</i></b></p>
+    <p class="ba-sub">舊版 458 則・新版 28 則<br>（2026 年 11 月）</p>
+  </div>
+  <ul class="ba-quotes">
+    <li class="glass" style="--i:0"><i>★★★★★</i>比舊版好用太多了！</li>
+    <li class="glass" style="--i:1"><i>★★★★★</i>生日當天，吉祥物端蛋糕說生日快樂，超可愛 😍</li>
+    <li class="glass" style="--i:2"><i>★★★★★</i>要轉出的帳號也能同步顯示餘額，很清楚</li>
+    <li class="ba-src" style="--i:3">— App Store 網友評論</li>
+  </ul>
+  <aside class="notes"><b class="cue">舊版：一整片圖示，自己找</b><b class="cue">新版：先看到餘額、常用 4 個、優惠權益</b><b class="cue">評分 1.6 → 3.9（目前）</b><b class="cue">吉祥物「高吉狗」端蛋糕那則</b><span class="act">按一次全部出現</span><span class="go">這就是四個步驟一路做下來的結果</span></aside>
+</section>
+
+<section data-at="14:41" class="slide loop-end" data-section="case" data-title="每一步都在確認問題：The Loop">
+  <div class="le-copy">
+    <p class="kicker r">Takeaway</p>
+    <h2 class="r">每一步，都在確認<br><em class="marker">我們解的是對的問題</em></h2>
+    <p class="le-ibm">這個循環叫做 <b>The Loop</b>：<br>觀察、反思、動手做，做完再回去觀察。</p>
+  </div>
+  <div class="loop-inf step">
+    <p class="li-k">Enterprise Design Thinking · The Loop</p>
+    <svg viewBox="0 0 560 260" aria-hidden="true">
+      <path class="li-track" pathLength="100" d="M280,130 C340,30 525,30 525,130 C525,230 340,230 280,130 C220,30 35,30 35,130 C35,230 220,230 280,130 Z"/>
+      <path class="li-run" pathLength="100" d="M280,130 C340,30 525,30 525,130 C525,230 340,230 280,130 C220,30 35,30 35,130 C35,230 220,230 280,130 Z"/>
+    </svg>
+    <ol class="li-cap">
+      <li><b>Observe</b><span>觀察</span><small>使用者研究</small></li>
+      <li><b>Reflect</b><span>反思</span><small>設計思考工作坊</small></li>
+      <li><b>Make</b><span>動手做</span><small>原型＋易用性測試</small></li>
+    </ol>
+  </div>
+  <aside class="notes"><b class="cue">四步都在確認解對問題</b><b class="cue">像高銀：客戶以為的 ≠ 使用者想的</b><b class="cue key">The Loop：聆聽＝觀察、發想＝反思、驗證＝動手做</b><b class="cue">上線後繼續看回饋、改下一版</b><span class="act">→ 出現迴圈</span><span class="go">接下來聊聊 AI</span></aside>
+</section>
+
+<!-- ============ AI 提升個人效率 ============ -->
+<section data-at="14:42" class="slide chapter" data-section="ai1" data-title="章節：AI 提升個人效率">
+  <canvas class="ch3d r" width="760" height="760" aria-hidden="true"></canvas>
+  <p class="num r">03</p>
+  <h2 class="r">AI 怎麼幫我<br>把事情做得更快</h2>
+  <p class="lead r">我也還在摸索，分享四個我現在用 AI 的場景</p>
+  <aside class="notes"><b class="cue">還沒有專案全程靠 AI 完成</b><b class="cue">我也還在摸索</b><b class="cue">四個場景，看用法怎麼改變</b><span class="go">第一個場景是訪談結束之後</span></aside>
+</section>
+
+<section data-at="14:43" class="slide stage-d story" data-section="ai1" data-title="場景 1：訪談全部結束之後">
+  <ol class="stepper r"><li class="on"><b>01</b>訪談之後</li><li class=""><b>02</b>提案之前</li><li class=""><b>03</b>自己做工具</li><li class=""><b>04</b>現在</li></ol>
+  <div class="sd-body">
+    <div class="sd-main">
+      <p class="kicker r">場景 1 · 訪談全部結束之後</p>
+      <h2 class="r">5–6 場訪談，<br>每場 1.5 小時，<br>錄音全部要整理</h2>
+    </div>
+    <div class="sd-side">
+      <div class="glass r"><p class="tag">以前</p><p>要一段一段重聽，邊聽邊抄重點</p></div>
+      <div class="glass step story-ai"><p class="tag">AI 幫我</p><p>整理錄音、找出受訪者的共通點 <span class="chip">NotebookLM</span></p></div>
+      <div class="glass step story-me"><p class="tag">我負責</p><p>回頭確認，這些重點到底對不對</p></div>
+    </div>
+    <p class="sd-why story-take step"><small>學到的事</small>AI 省下時間，判斷還是我的</p>
+    <p class="ai-tip step"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg></i><span><small>AI 小提醒</small><b>AI 會一本正經地亂講（幻覺）</b>整理出的洞察，要對照原始逐字稿</span></p>
+    
+  </div>
+  <aside class="notes"><b class="cue key">💡 AI 會一本正經地亂講（幻覺）：整理出的洞察，要對照原始逐字稿</b><b class="cue">5–6 位、每場 1.5 小時、7–9 小時錄音</b><b class="cue">NotebookLM 找受訪者共通點</b><b class="cue">對照原始錄音確認</b><b class="cue">省時間，能不能用由我判斷</b><span class="act">→ 依序出現，最後是燈泡</span><span class="go">第二個場景是提案前卡關</span></aside>
+</section>
+
+<section data-at="14:44" class="slide stage-d story" data-section="ai1" data-title="場景 2：提案前卡住">
+  <ol class="stepper r"><li class="done"><b>01</b>訪談之後</li><li class="on"><b>02</b>提案之前</li><li class=""><b>03</b>自己做工具</li><li class=""><b>04</b>現在</li></ol>
+  <div class="sd-body">
+    <div class="sd-main">
+      <p class="kicker r">場景 2 · 提案前卡住的時候</p>
+      <h2 class="r">問卷、訪綱、<br>簡報標題，<br>怎麼寫都不對</h2>
+    </div>
+    <div class="sd-side">
+      <div class="glass r"><p class="tag">以前</p><p>自己一個人反覆改，越改越沒把握</p></div>
+      <div class="glass step story-ai"><p class="tag">AI 幫我</p><p>規劃問卷與訪綱，給我幾個不同的標題用詞 <span class="chip">ChatGPT</span></p></div>
+      <div class="glass step story-me"><p class="tag">我負責</p><p>選一個方向，再改成自己的話</p></div>
+    </div>
+    <p class="sd-why story-take step"><small>學到的事</small>AI 給選項，我做決定</p>
+    <p class="ai-tip step"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg></i><span><small>AI 小提醒</small><b>先告訴 AI 目的和對象</b>要達成什麼、找什麼人；再請它檢查有沒有是非題、引導性問題</span></p>
+    
+  </div>
+  <aside class="notes"><b class="cue key">💡 先給 AI 目的、目標、受訪對象；請它檢查是非題、引導性問題</b><b class="cue key">🎯 別畫靶射箭：只說想了解什麼，不說想做什麼</b><b class="cue">問卷、訪綱、標題怎麼寫都不到位</b><b class="cue">ChatGPT 提供架構、幾種標題</b><b class="cue">挑方向，用自己的話整理</b><b class="cue">AI 給選項，我做取捨</b><span class="act">→ 依序出現，最後是燈泡</span><span class="go">第三個場景是一個轉折</span></aside>
+</section>
+
+<section data-at="14:45" class="slide stage-d story" data-section="ai1" data-title="場景 3：同一件麻煩事又來了">
+  <ol class="stepper r"><li class="done"><b>01</b>訪談之後</li><li class="done"><b>02</b>提案之前</li><li class="on"><b>03</b>自己做工具</li><li class=""><b>04</b>現在</li></ol>
+  <div class="sd-body">
+    <div class="sd-main">
+      <p class="kicker r">場景 3 · 轉折</p>
+      <h2 class="r">整理 Design Kit，<br>又要再做一次</h2>
+    </div>
+    <div class="sd-side">
+      <div class="glass r"><p class="tag">以前</p><p>頻繁要做的事，每次都手動處理</p></div>
+      <div class="glass step story-ai"><p class="tag">AI 幫我</p><p>在 Figma 整理設計系統、寫元件規範，做外掛處理色碼、字級設定 <span class="chip">Figma</span></p></div>
+      <div class="glass step story-me"><p class="tag">我負責</p><p>想清楚要解決什麼，試用後再修</p></div>
+    </div>
+    <p class="sd-why story-take step"><small>學到的事</small>遇到麻煩，先想「能不能做個工具解決」</p>
+    <p class="ai-tip step"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg></i><span><small>AI 小提醒</small><b>先把規則想清楚，再交給 AI</b>規則沒想清楚就大量產出，做錯得全部重來</span></p>
+    
+  </div>
+  <aside class="notes"><b class="cue key">💡 先把規則想清楚再交給 AI，避免做錯後全部重來</b><b class="cue">Design Kit 每次手動重做</b><b class="cue">Figma：整理設計系統、寫元件規範</b><b class="cue">做外掛處理瑣碎的色碼、字級設定</b><b class="cue">先想清楚問題，試用再調整</b><b class="cue">能不能做成小工具？</b><span class="act">→ AI 幫我 → 我負責 → 學到的事 → 燈泡</span><span class="go">最近，工具開始不只幫到我自己</span></aside>
+</section>
+
+<section data-at="14:46" class="slide stage-d solo" data-section="ai1" data-title="場景 3 延伸：每天的待辦也做成工具">
+  <ol class="stepper r"><li class="done"><b>01</b>訪談之後</li><li class="done"><b>02</b>提案之前</li><li class="on"><b>03</b>自己做工具</li><li class=""><b>04</b>現在</li></ol>
+  <div class="sd-body">
+    <div class="sd-main">
+      <p class="kicker r">場景 3 · 延伸</p>
+      <h2 class="r">每天的待辦，<br>也做成工具</h2>
+      <p class="lead r">說一句「記一下」，<br>就排進清單和日曆</p>
+    </div>
+    <figure class="solo-shot wb-anim r" aria-label="今日工作台示意動畫"><div class="wb-page">
+      <div class="wb-top"><b class="wb-date">17</b><p>11 月・週二<small>待分類 <span data-left>5</span> 件・已連線</small></p><nav><em>排今天</em><span>今天</span><span>日曆</span><span>甘特圖</span><span>紀錄</span></nav></div>
+      <div class="wb-add"><span class="wb-sel">工作</span><span class="wb-sel">一般</span><span class="wb-input">新增一件事（直接排進今天）；有時間的行程請在 Claude 說「記一下」</span><span class="wb-btn">新增</span></div>
+      <p class="wb-hint">右滑今天・左滑延後・上滑做完了・下滑不做</p><p class="wb-remain">還剩 <b data-remain>5</b> 張</p>
+      <div class="wb-stack"></div>
+      <div class="wb-fin"><b>分好了，<br>今天專心做這些。</b><div class="wb-sum"><span><b data-sum-r>0</b>今天做</span><span><b data-sum-l>0</b>延後</span><span><b>0</b>不做</span></div><i>看今天的卡片</i></div>
+      <div class="wb-cat" aria-hidden="true"><svg viewBox="0 0 120 112"><g class="front"><path class="tail" d="M86 98 C110 100 118 78 106 62" stroke="var(--cat)" stroke-width="9" fill="none" stroke-linecap="round"/><ellipse cx="60" cy="84" rx="31" ry="24" fill="var(--cat)"/><ellipse cx="60" cy="90" rx="15" ry="15" fill="var(--cat-belly)"/><path d="M33 76 q6 3 10 0 M32 86 q6 3 10 0 M78 76 q6 3 10 0" stroke="var(--cat-dark)" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="49" cy="106" rx="8" ry="5" fill="var(--cat-belly)"/><ellipse cx="71" cy="106" rx="8" ry="5" fill="var(--cat-belly)"/><polygon points="38,34 42,10 57,25" fill="var(--cat)"/><polygon points="82,34 78,10 63,25" fill="var(--cat)"/><polygon points="42,28 44,16 52,25" fill="var(--cat-pink)"/><polygon points="78,28 76,16 68,25" fill="var(--cat-pink)"/><circle cx="60" cy="46" r="25" fill="var(--cat)"/><path d="M52 24 l2 8 M60 22 v9 M68 24 l-2 8" stroke="var(--cat-dark)" stroke-width="3" stroke-linecap="round"/><ellipse cx="60" cy="56" rx="12" ry="8" fill="var(--cat-belly)"/><ellipse class="eye-o" cx="50" cy="45" rx="3.4" ry="4.4" fill="var(--cat-eye)"/><ellipse class="eye-o" cx="70" cy="45" rx="3.4" ry="4.4" fill="var(--cat-eye)"/><path class="eye-c" d="M46 46 q4 3 8 0 M66 46 q4 3 8 0" stroke="var(--cat-eye)" stroke-width="2.4" fill="none" stroke-linecap="round"/><path class="eye-h" d="M46 47 q4 -5 8 0 M66 47 q4 -5 8 0" stroke="var(--cat-eye)" stroke-width="2.6" fill="none" stroke-linecap="round"/><polygon points="57,52 63,52 60,55.5" fill="var(--cat-pink)"/><path d="M60 55.5 q-3 4 -6 2 M60 55.5 q3 4 6 2" stroke="var(--cat-eye)" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M44 54 h-12 M44 57 l-11 3 M76 54 h12 M76 57 l11 3" stroke="var(--cat-dark)" stroke-width="1.2" stroke-linecap="round"/><ellipse cx="44" cy="53" rx="4" ry="2.4" fill="var(--cat-pink)" opacity=".45"/><ellipse cx="76" cy="53" rx="4" ry="2.4" fill="var(--cat-pink)" opacity=".45"/></g><g class="zzz"><text x="88" y="22" font-size="13">z</text><text x="98" y="10" font-size="10">z</text></g></svg></div>
+      <div class="wb-cols"><section class="wb-col today"><h4>今天做<b>0</b></h4><ul></ul></section><section class="wb-col later"><h4>延後<b>0</b></h4><ul></ul></section></div>
+    </div></figure>
+  </div>
+  <aside class="notes"><b class="cue key">個人的工作管理，也能做成自己的工具</b><b class="cue">我的今日工作台（動畫是示意，用範例資料）</b><b class="cue">說一句「記一下」→ 排進清單、寫進日曆</b><b class="cue">→ 卡片右滑今天做、左滑延後，我只負責決定</b><span class="go">最近，工具開始不只幫到我自己</span></aside>
+</section>
+
+<section data-at="14:47" class="slide stage-d story" data-section="ai1" data-title="場景 4：工具開始幫到別人">
+  <ol class="stepper r"><li class="done"><b>01</b>訪談之後</li><li class="done"><b>02</b>提案之前</li><li class="done"><b>03</b>自己做工具</li><li class="on"><b>04</b>現在</li></ol>
+  <div class="sd-body">
+    <div class="sd-main">
+      <p class="kicker r">場景 4 · 現在</p>
+      <h2 class="r">工具開始<br>不只幫到我一個人</h2>
+    </div>
+    <div class="sd-side">
+      <div class="glass r"><p class="tag">以前</p><p>設計規範散在各處，每個人的理解都不一樣</p></div>
+      <div class="glass step story-ai"><p class="tag">AI 幫我</p><p>設定 Design Token，把規範變成大家查得到的字典</p></div>
+      <figure class="tool-shot dict-anim step"><div class="wk-off tool-off">僅於現場播放</div><figcaption>團隊的元件字典：搜尋舊稱「Popup」，直接告訴你正式名稱是「Dialog」</figcaption></figure>
+      <div class="glass step story-me"><p class="tag">我負責</p><p>和團隊對齊共識，<br>尤其是用詞</p></div>
+    </div>
+    <p class="sd-why story-take step"><small>學到的事</small>工具只是開始，<br>講同一種語言才會一起變快</p>
+    <p class="ai-tip step"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg></i><span><small>AI 小提醒</small><b>AI 可以找出用詞不一致</b>但每個詞的定義，要團隊一起決定</span></p>
+  </div>
+  <aside class="notes"><b class="cue key">💡 AI 可以找出用詞不一致，但定義要團隊一起決定</b><b class="cue">規範分散、理解不一致</b><b class="cue">AI 協助設定 Design Token，整理成字典</b><b class="cue">→ 字典動畫：搜 Popup → 正式名稱 Dialog</b><b class="cue">最多時間花在對齊共識，尤其是用詞</b><b class="cue">同一顆按鈕：主要按鈕／Primary／確認鈕</b><b class="cue">講同一種語言，團隊才會一起變快</b><span class="act">→ AI 幫我 → 字典動畫 → 我負責 → 學到的事 → 燈泡</span><span class="go">不過，只有自己變快還不夠</span></aside>
+</section>
+
+<!-- ============ AI 串起團隊流程 ============ -->
+<section data-at="14:48" class="slide chapter" data-section="ai2" data-title="章節：AI 串起團隊流程">
+  <canvas class="ch3d r" width="760" height="760" aria-hidden="true"></canvas>
+  <p class="num r">04</p>
+  <h2 class="r">跳脫單點優化：<br>串起整個團隊</h2>
+  <p class="lead r">自己變快還不夠，卡關的常常是人跟人之間</p>
+  <aside class="notes"><b class="cue">卡住的不是個人速度</b><b class="cue">是人與人之間的銜接</b><b class="cue">設計改了前端不知道；規格和畫面對不起來</b><span class="go">所以我從自己開始往外擴大</span></aside>
+</section>
+
+<section data-at="14:49" class="slide ripple" data-section="ai2" data-title="影響力一圈一圈往外擴">
+  <p class="kicker r">從我開始</p>
+  <h2 class="r">影響力，一圈一圈往外擴</h2>
+  <div class="rp-body">
+    <div class="rp-rings r" aria-hidden="true">
+      <span class="ring g3"><i>跨部門</i></span>
+      <span class="ring g2"><i>設計團隊</i></span>
+      <span class="ring g1"><i>我</i></span>
+    </div>
+    <ol class="rp-list">
+      <li class="step s1"><b>我</b><p>做小工具，解決自己重複的麻煩事</p></li>
+      <li class="step s2"><b>設計團隊</b><p>大家共用同一套設計規範</p></li>
+      <li class="step s3"><b>跨部門</b><p>SA、前端也一起用，一改就同步</p></li>
+    </ol>
+  </div>
+  <aside class="notes"><b class="cue">內圈：自己的小工具</b><b class="cue">設計團隊：同一套規範</b><b class="cue">跨部門：SA、前端看同一份</b><span class="act">→ 一圈一圈出現</span><span class="go">AI 也能解決團隊的問題</span></aside>
+</section>
+
+<section data-at="14:50" class="slide statement" data-section="ai2" data-title="從自己的問題到團隊的問題">
+  <p class="kicker r">Shift</p>
+  <h2 class="big r">從解決<em>自己</em>的問題，<br>到解決<em class="marker">團隊</em>的問題</h2>
+  <aside class="notes"><b class="cue">個人的問題 → 團隊的問題</b><b class="cue">跟設計思考是同一件事</b><b class="cue">先看清楚卡在哪，再決定做什麼</b><span class="go">我們先休息 10 分鐘</span></aside>
+</section>
+
+<!-- ============ 中場休息 ============ -->
+<section data-at="14:51" class="slide break" data-section="break" data-title="中場休息">
+  <div class="task-copy">
+    <p class="kicker r">Break</p>
+    <h2 class="r">休息一下</h2>
+    <p class="lead r">可以先到 Slido 留下想問的問題</p>
+    <p class="back r" data-back></p>
+  </div>
+  <div class="timer r" data-timer="600" data-label="中場休息" data-break></div>
+  <aside class="notes"><b class="cue">休息 10 分鐘</b><b class="cue">問題先留在 Slido</b><span class="act">→ 開始倒數；確認 Careena 準備好</span><span class="go">回來聊：AI 什麼都能做，設計師還能做什麼？</span></aside>
+</section>
+
+<!-- ============ 心態轉變 ============ -->
+<section data-at="15:01" class="slide chapter" data-section="mind" data-title="章節：AI 什麼都能做，設計師還能做什麼？">
+  <canvas class="ch3d r" width="760" height="760" aria-hidden="true"></canvas>
+  <p class="num r">05</p>
+  <h2 class="r wide">AI 什麼都能做，<br>設計師還能做什麼？</h2>
+  <aside class="notes"><b class="cue">歡迎回來</b><b class="cue">AI 什麼都能做，設計師還能做什麼？</b><span class="go">這兩年 AI 進步得非常快</span></aside>
+</section>
+
+<section data-at="15:01" class="slide why" data-section="mind" data-title="為什麼改變做法">
+  <h2 class="r">AI 帶來了什麼改變？</h2>
+  <div class="vs tall">
+    <div class="card glass r"><p class="tag">AI 的躍進</p><h3>動手的門檻<br>一下子變低了</h3><p>只要敢試，幾乎沒有做不到的事</p></div>
+    <div class="card glass hl step"><p class="tag">所以重點變成</p><h3>不是打造更好的工具，<br>而是從真正的痛點著手</h3><p>先問對問題，AI 才幫得上忙</p></div>
+  </div>
+  <aside class="notes"><b class="cue">動手門檻變很低</b><b class="cue">以前花好幾年才把介面和動態做好</b><b class="cue">AI slop：大量產出、沒價值的數位垃圾</b><b class="cue">做得出來不難，難的是知道要做什麼</b><span class="go">AI 時代，設計師需要四項能力</span></aside>
+</section>
+
+<section data-at="15:02" class="slide four" data-section="mind" data-title="四種能力">
+  <h2 class="r">AI 時代，設計師需要的四種能力</h2>
+  <ol class="grid4">
+    <li class="glass r"><b>01</b><h3>問對問題</h3><p>好奇心、同理心</p></li>
+    <li class="glass step"><b>02</b><h3>想得夠廣</h3><p>想像力、開放的態度</p></li>
+    <li class="glass step"><b>03</b><h3>判斷得準</h3><p>美感與設計基礎</p></li>
+    <li class="glass step"><b>04</b><h3>做得夠快</h3><p>快速執行與驗證</p></li>
+  </ol>
+  <p class="t-take step"><i class="t-ico" aria-hidden="true"></i><span>未來缺的是 <b>T 型人才</b>：視野夠廣，<em>判斷夠深</em></span></p>
+  <aside class="notes"><b class="cue">問對問題：好奇心、同理心</b><b class="cue">想得夠廣：想像力、接納觀點</b><b class="cue">判斷得準：美感、基本功</b><b class="cue">做得夠快：原型、驗證</b><b class="cue key">基本功＝prompt 的精準度</b><b class="cue">懂字級、間距、層級、對比 → 寫得出精準 prompt</b><b class="cue">越精準，產出越接近你心中想要的</b><b class="cue">T 型：瓶頸變成「做什麼」→ 缺會判斷的人</b><b class="cue">橫＝視野，豎＝判斷力；先挖深一項專長</b><span class="act">→ 四張卡 → T 型人才</span><span class="go">那判斷力要怎麼培養？</span></aside>
+</section>
+
+<section data-at="15:04" class="slide retry" data-section="mind" data-title="別把大腦外包給 AI">
+  <div class="rt-copy">
+    <p class="kicker r">判斷怎麼練深？</p>
+    <h2 class="r">別把大腦<br><em class="marker">外包</em>給 AI</h2>
+    <p class="lead r">什麼都問 AI，變聰明的只有 AI。<br>哪天沒有 AI，你就慌了</p>
+    <p class="rt-take">享受犯錯、享受失敗，<br><b>你的大腦才會跟著進步。</b></p>
+  </div>
+  <div class="rt-game glass step">
+    <p class="rt-k">像打遊戲一樣</p>
+    <div class="rt-grid"><i style="--i:0">✕</i><i style="--i:1">✕</i><i style="--i:2">✕</i><i style="--i:3">✕</i><i style="--i:4">✕</i><i style="--i:5">✕</i><i style="--i:6">✕</i><i style="--i:7">✕</i><i style="--i:8">✕</i><i style="--i:9">✕</i><i style="--i:10">✕</i><i style="--i:11">✕</i><i style="--i:12">✕</i><i style="--i:13">✕</i><i style="--i:14">✕</i><i style="--i:15">✕</i><i style="--i:16">✕</i><i style="--i:17">✕</i><i style="--i:18">✕</i><i class="win" style="--i:19">★</i></div>
+    <p class="rt-cap"><span>死了 19 次⋯⋯</span><b>第 20 次，過關！</b></p>
+  </div>
+  <aside class="notes"><b class="cue">不要把思考交給 AI</b><b class="cue">問久了越來越少自己思考</b><b class="cue">不要怕犯錯，享受失敗</b><b class="cue">打電動：失敗十次，破關成就感最大</b><span class="act">→ 遊戲格一格一格出現</span><span class="go">練好的判斷力，要用在哪裡？</span></aside>
+</section>
+
+<section data-at="15:06" class="slide echo" data-section="mind" data-title="前後對照">
+  <h2 class="r">還記得鬧鐘嗎？</h2>
+  <div class="vs">
+    <div class="card glass r"><p class="tag">開場</p><h3>AI 可以<br>幫我做什麼？</h3><p>從工具出發，像在設計一個鬧鐘</p></div>
+    <div class="arrow r" aria-hidden="true">→</div>
+    <div class="card glass hl step"><p class="tag">現在</p><h3>我想解決<br>什麼問題？</h3><p>從需求出發，像在設計幸福的喚醒方式</p></div>
+  </div>
+  <aside class="notes"><b class="cue">開場投票：大家寫「○○」</b><b class="cue">從工具出發＝設計鬧鐘</b><b class="cue">從需求出發＝幸福的喚醒</b><b class="cue">你最想用 AI 解決什麼問題？</b><span class="act">帶入 p.3 文字雲的詞</span><span class="go">最後想送大家一句話</span></aside>
+</section>
+<section data-at="15:07" class="slide core" data-section="mind" data-title="核心句">
+  <div class="core-deco" aria-hidden="true">
+    <div class="ceiling"><span><b class="lo">AI 的天花板</b><b class="hi">被你的想法推高了 ↑</b></span></div>
+    <canvas class="isles far" width="1600" height="900"></canvas>
+    <canvas class="isles main" width="1600" height="900"></canvas>
+    <canvas class="isles near" width="1600" height="900"></canvas>
+    <i class="spark s1">✦</i><i class="spark s2">✦</i><i class="spark s3">✦</i><i class="spark s4">✦</i><i class="spark s5">✦</i><i class="spark s6">✦</i>
+  </div>
+  <p class="kicker r">最後，送給大家一句話</p>
+  <p class="echo-line r"><b>「你的想像力，就是 AI 的天花板」</b></p>
+  <h2 class="big step">讓 AI 動手，<em class="dream">你來動腦</em></h2>
+  <ul class="habits mind step"><li><b>保持好奇心</b></li><li><b>勇敢嘗試</b></li><li><b>享受犯錯</b></li></ul>
+  <aside class="notes"><b class="cue key">回扣題目：讓 AI 成為你的超能力</b><b class="cue">（口頭）真正的超能力不在 AI 身上，而是你想得多遠</b><b class="cue">想像力是 AI 的天花板</b><b class="cue">→ 讓 AI 動手，你來動腦</b><b class="cue">AI 能做到多好，取決於你想得多遠</b><b class="cue key">→ 保持好奇心・勇敢嘗試・享受犯錯（講完整：享受犯錯的過程）</b><span class="act">→ 主句 → 三個心態</span><span class="go">謝謝大家，接下來介紹 Careena</span></aside>
+</section>
+
+<!-- ============ Q&A ============ -->
+<section data-at="15:08" class="slide chapter" data-section="bob" data-scene="ai1" data-title="章節：IBM SkillsBuild & IBM Bob">
+  <canvas class="ch3d r" width="760" height="760" aria-hidden="true"></canvas>
+  <p class="num r">06</p>
+  <h2 class="r">IBM SkillsBuild<br>&amp; IBM Bob</h2>
+  <ul class="ch-pts r">
+    <li>IBM 完全免費的數位學習平台</li>
+    <li>22 大主題、超過 1,000 門課程</li>
+    <li>全球逾 2,200 萬人使用，可拿業界認證證書</li>
+  </ul>
+  <p class="ch-by r">分享者：Careena</p>
+  <aside class="notes"><b class="cue">介紹 Careena</b><b class="cue">SkillsBuild：免費、一千多門課、證書</b><b class="cue">IBM Bob</b><span class="act">交出遙控器；她講完按 → 進 Q&amp;A</span><span class="go">謝謝 Careena</span></aside>
+</section>
+
+<section data-at="15:28" class="slide qa" data-section="qa" data-title="Q&A" data-poll>
+  <div class="poll-copy">
+    <p class="kicker r">Q&amp;A</p>
+    <h2 class="r">謝謝大家，<br>歡迎提問</h2>
+    <p class="lead r">Slido 上票數高的問題先回答</p>
+  </div>
+  <figure class="qr-card glass r"><div class="qr slido-qr"><span class="qr-ph">Slido QR code<br><small>存成 assets/img/slido-qr.png</small></span><img src="assets/img/slido-qr.png" alt="Slido 提問的 QR code" onerror="this.remove()"></div><figcaption>slido.com · #1739475</figcaption></figure>
+  <aside class="notes"><b class="cue">從 Slido 票數高的開始</b><b class="cue">AI 工具題請 Careena 一起</b><b class="cue">16:00 收尾：謝謝邱老師、謝謝大家參與</b></aside>
+</section>
+
+</main>
+
+<footer class="chrome" aria-hidden="true"><span>IBM Consulting · © IBM Confidential</span><span class="chrome-r"><span class="pace" id="pace" hidden><small>預計</small><span id="paceTime"></span></span><span id="pageNo"></span></span></footer>
+<div class="results" id="results" hidden>
+  <iframe id="resultsFrame" title="即時投票結果"></iframe>
+  <form class="setup glass" id="resultsSetup" hidden>
+    <h3>貼上投票主持人網址</h3>
+    <p>網址含主持人金鑰，只會存在這台電腦的瀏覽器裡。</p>
+    <input id="hostUrl" type="text" placeholder="https://live-poll.luju.workers.dev/host?key=…" required>
+    <button class="pill" type="submit">開啟</button>
+  </form>
+  <button class="close pill" id="resultsClose" type="button">關閉 <kbd>Esc</kbd></button>
+</div>
+<div class="overview" id="overview" hidden>
+  <header class="ov-head"><h2>所有投影片</h2><p>點一張跳過去 · 方向鍵選擇、Enter 前往 · <kbd>G</kbd> 或 <kbd>Esc</kbd> 關閉</p><button class="pill" id="ovClose" type="button">關閉</button></header>
+  <div class="ov-body" id="ovBody"></div>
+</div>
+<div class="help glass" id="help" hidden>
+  <h3>快捷鍵</h3>
+  <dl>
+    <dt>→ / 空白 / PageDown</dt><dd>下一步（倒數頁會先開始計時）</dd>
+    <dt>← / PageUp</dt><dd>上一步</dd>
+    <dt>G</dt><dd>所有投影片目錄，點一張就跳過去</dd>
+    <dt>P</dt><dd>開啟／關閉講者視窗（在講者視窗裡按 P 也會關閉）</dd>
+    <dt>T</dt><dd>顯示／隱藏角落的節奏計時</dd>
+    <dt>V</dt><dd>即時投票結果</dd>
+    <dt>Enter</dt><dd>倒數：開始／暫停　影片：播放／暫停</dd>
+    <dt>+ / −</dt><dd>倒數加減一分鐘，0 重設（重設後按 → 重新開始）</dd>
+    <dt>B</dt><dd>p.28 便利貼擺法：打開／收起示意圖（倒數照常進行）</dd>
+    <dt>F / Esc</dt><dd>進入／離開全螢幕（移動滑鼠，左上角也有離開按鈕）</dd>
+    <dt>S</dt><dd>講者計時歸零重來</dd>
+  </dl>
+</div>
+
+<script src="assets/vendor/qrcode.js"></script>
+<script src="assets/deck.js?v=19"></script>
+<script src="assets/vendor/three.min.js"></script>
+<script src="assets/cover-island.js?v=3"></script>
+<script src="assets/chapter-3d.js?v=3"></script>
+<script src="assets/core-isles.js?v=5"></script>
+<script src="assets/vignettes.js?v=7"></script>
+<script src="assets/wb-anim.js?v=2"></script>
+</body>
+</html>
